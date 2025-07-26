@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">LOGO</a>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Collection</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="user-auth" >
+            <div class="profile-box" style="display: none;" >
+                <div class="avatar-circle">C</div>
+                <div class="dropdown">
+                    <a href="#">My Account</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+
+            <button type="button" class="login-btn" >Login</button>
+        </div>
+    </header>
+    <section>
+        <h1>Hey Developer...!</h1>
+    </section>
+
+    <div class="alert-box" style="display: none;">
+        <div class="alert success">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Registration Successful</span>
+        </div>
+    </div>
+
+    <div class="auth-modal">
+        <button type="button" class="close-btn"><i class="fa-solid fa-x"></i></button>
+       <div class="form-box login">
+            <form action="#" method="post">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <button type="submit" name="login-btn" class="btn">Login</button>
+                <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+            </form>
+       </div>
+
+       <div class="form-box register">
+            <form action="#" method="post">
+                <h2>Register</h2>
+                <div class="input-box">
+                    <input type="test" name="name" placeholder="Name" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="password" required>
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <button type="submit" name="register-btn" class="btn">Register</button>
+                <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+   <script src="./script.js"></script>
+</body>
+</html>
