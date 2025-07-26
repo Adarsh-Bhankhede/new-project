@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Poppins", sans-serif;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* background-color: seagreen; */
+    backdrop-filter: blur(40px);
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+.logo{
+    margin-right: auto;
+    & a {
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    margin-right: auto;
+}
+}
+
+nav a{
+    text-decoration: none;
+    font-weight: 500;
+     color: #fff;
+    margin-left: 40px;
+}
+.user-auth .login-btn{
+    margin-left: 40px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 35px;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    border: #fff solid 2px;
+    border-radius: 40px;
+    transition:all .5s;
+}
+.user-auth .login-btn:hover{
+    color: #222;
+    background: #fff;
+}
+
+section{
+    min-height: 100vh;
+    background: url("./bg3.avif") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 100px;
+}
+
+section h1{
+    position: absolute;
+    font-size: 25px;
+    font-weight: 600;
+    bottom: 40px;
+    color: #fff;
+}
+
+.auth-modal{
+    position: fixed;
+    width: 420px;
+    height: 440px;
+    z-index: 20;
+    background: rgba(0, 0, 0, .3);
+    border: 2px solid rgba(255, 255, 255, .3);
+  border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+    color: #fff;
+    inset: 0;
+     margin: auto;
+    display: flex;
+    align-items: center;
+    transition: all .2s ease, transform .5s ease;
+    overflow: hidden;
+    transform: scale(0);
+
+} 
+
+.auth-modal.show{
+    transform: scale(1);
+}
+.auth-modal .form-box.register{
+    position: absolute;
+    transform: translateX(400px);
+
+}
+.auth-modal .form-box{
+    width: 100%;
+    padding: 40px;
+}
+.auth-modal.slide{  
+    height: 520px;
+}
+.auth-modal .form-box.login,.auth-modal.slide .form-box.register{
+    transition: all .18s ease;
+    transform: translateX(0);
+}
+.auth-modal.slide .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+
+}
+.form-box h2{
+    font-size: 30px;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    border: 2px solid  rgba(255, 255, 0255, .3);
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+    
+}
+.input-box input::placeholder{
+    color: #fff;
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    background: #fff;
+    color: #222;
+    border: none;
+    border-radius: 40px;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+
+}
+
+.form-box p{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 25px 0 10px;
+
+}
+.form-box p a{
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+}
+.form-box p a:hover{
+    text-decoration: underline;
+}
+
+.auth-modal .close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: #222;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    border: none;
+    z-index: 20;
+}
+
+.profile-box .avatar-circle{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 40px;
+}
+
+.profile-box .dropdown{
+    position: absolute;
+    top: 85px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    transform: translateY(20px);
+    pointer-events: none;
+    opacity: 0;
+    transition: .5s ease;
+}
+.profile-box.show-dropdown .dropdown{
+     transform: translateY(0);
+    pointer-events: all;
+    opacity: 1;
+}
+.profile-box .dropdown a{
+    text-decoration: none;
+    width: 100%;
+    color: #222;
+    padding: 6px 12px;
+    margin: 2px 0;
+    border-radius: 4px;
+    transition: all.5s;
+}
+.profile-box .dropdown a:hover{
+    background: #eee;
+}
+
+.alert-box{
+    position: fixed;
+    z-index: 100;
+    inset: 0;
+    top: 35px;
+    width: 350px;
+    height: 70px;
+    border-radius: 6px;
+    background: #fff;
+    color: #222;
+    padding: 0 15px;
+    margin: 0 auto;
+    overflow: hidden;
+    transform: translateY(-100%-35px);
+    transition:all .5s ease;
+}
+.alert-box.show{
+    transform: translateY(0); 
+}
+.alert{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #222;
+    font-weight: 500;
+}
+
+.alert::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    background: seagreen;
+    animation: progress 6s linear forwards;
+}
+@keyframes progress {
+    100%{
+        width: 0;
+    }
+}
+.alert.error::after{
+    background: re#f00;
+}
+
+.alert i{
+    font-size: 35px;
+    color: seagreen;
+    margin-right: 8px;
+}
+.alert.error i{
+    color: #f00;
+}
